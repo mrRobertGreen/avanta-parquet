@@ -1,0 +1,108 @@
+<div class="building" id="building_plintus">
+    <div class="building__title">
+        @@include("./_title.html", {
+        text: "Соберите плинтус"
+        })
+    </div>
+    <div class="building__subtitle">
+        @@include("./_subtitle.html", {
+        text: "Отправьте нам сборку и мы проконсультируем Вас"
+        })
+    </div>
+    <div class="types buildings__types" id="types-row-plintus">
+        <div class="types__track">
+            <div class="types__item types__item_active" id="plintus-evro">
+                <div class="types__img">
+                    <img src="../img/img_config/plintus1.png" alt="">
+                    <!-- <div class="building__circle pink"></div> -->
+                </div>
+                <img class="tick" src="../img/tick.svg"/>
+                <div class="types__name">Евро</div>
+            </div>
+            <div class="types__item" id="plintus-evro-streight">
+                <div class="types__img">
+                    <img src="../img/img_config/plintus2.png" alt="">
+                    <!-- <div class="building__circle pink"></div> -->
+                </div>
+                <img class="tick" src="../img/tick.svg"/>
+                <div class="types__name">Евро (прямой)</div>
+            </div>
+            <div class="types__item" id="plintus-boot">
+                <div class="types__img">
+                    <img src="../img/img_config/plintus3.png" alt="">
+                    <!-- <div class="building__circle pink"></div> -->
+                </div>
+                <img class="tick" src="../img/tick.svg"/>
+                <div class="types__name">Сапожок</div>
+            </div>
+            <div class="types__item" id="plintus-figure">
+                <div class="types__img">
+                    <img src="../img/img_config/plintus4.png" alt="">
+                    <!-- <div class="building__circle pink"></div> -->
+                </div>
+                <img class="tick" src="../img/tick.svg"/>
+                <div class="types__name">Фигурный</div>
+            </div>
+        </div>
+    </div>
+    <div class="desktop-grid">
+        <div class="material buildings__material">
+            <div class="material__item material__item_active" id="mdf">МДФ</div>
+            <div class="material__item" id="beech">Бук</div>
+            <div class="material__item" id="oak">Дуб</div>
+            <div class="material__item" id="ash">Ясень</div>
+        </div>
+        <div class="building__style style">
+            <!-- <div class="style__item">
+                <span id="finish" class="style__span style__span_active">Финишная пленка</span>
+            </div>
+            <div class="style__item">
+                <span id="veneer" class="style__span">Шпон</span>
+            </div>
+            <div class="style__item">
+                <span id="dyed" class="style__span">Выкрашенный</span>
+            </div> -->
+        </div>
+        <div class="building__dimensions">
+            <div class="range">
+                <div class="range__title">
+                    Высота: <span class="height-mm">мм.</span>
+                </div>
+                <input type="range" class="range__input" value="5" min="0" max="10" id="range-height-plintus">
+                <div class="range__numbers _height">
+                    <div>70</div>
+                    <div>80</div>
+                    <div>100</div>
+                    <div>120</div>
+                    <div>150</div>
+                </div>
+            </div>
+            <div class="range" id="thickness">
+                <div class="range__title">
+                    Толщина: <span class="thickness-mm">мм.</span>
+                </div>
+                <input type="range" class="range__input" value="5" min="0" max="8" id="range-thickness-plintus">
+                <div class="range__numbers _thickness">
+                    <div>10</div>
+                    <div>12</div>
+                    <div>16</div>
+                    <div>18</div>
+                </div>
+            </div>
+        </div>
+        <div class="building__size size">
+            <div class="size__metres">
+                Пог. метры
+                <input type="number" class="size__input" value="1" min="1">
+            </div>
+            <div class="size__price">
+                <p>213 ₽</p>
+            </div>
+        </div>
+        <div class="building__btn-wrapper">
+            <button class="building__btn" id="plintus-btn">
+                Отправить сборку
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+/* Mixins */
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-row {
+    @include flex-column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* Variables */
+$blue: #e3f8fa;
+$dark-blue:#0095F6;
+$hover-blue: #0081D6;
+$hover-grey: #F2F2F2;
+$white: #fff;;
+$dark-grey: #565656;
+$black: #2F2F2F;
+$blue-black: #27272E;
+$light-grey:#ecf2f6;
+$grey: #abb0bd;
+$dark: #292930;
+$yellow: #FEFFC0;
+$pink: #fbd9fb;
+$dark-yellow:#FFD703;
+$turquoise:#90E5EC;
+$dark-pink: #EF67ED;
+
+
+/* Classes */
+._hidden {
+    visibility: hidden;
+    opacity: 0;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include("./html/_head.html")
+
+<body id="body">
+  <!-- попапы -->
+  @@include("./html/_popup.html", {
+    title: "Связаться с нами"
+  })
+
+  @@include("./html/_buildPop.html", {})
+  @@include("./html/_fail_modal.html", {})
+  @@include("./html/_success_modal.html", {})
+
+  <div class="wrapper">
+    <div class="main-screen">
+      @@include("./html/_liquidation.html", {})
+    </div>
+    @@include("./html/_header.html", {})
+    @@include("./html/_products.html", {})
+    @@include("./html/_discounts.html", {})
+    @@include("./html/_delivery.html", {})
+    @@include("./html/_menu.html", {})
+    <div id="plintus-start"></div>
+    @@include("./html/_forms.html", {
+    "title": "Формы плинтуса"
+    })
+    @@include("./html/_colors.html", {})
+    @@include("./html/_building_plintus.html", {})
+    <div id="plintus-end"></div>
+    <div id="rake-start"></div>
+    @@include("./html/_rake_form.html", {})
+    @@include("./html/_point.html", {})
+    @@include("./html/_colors.html", {})
+    @@include("./html/_building_rake.html", {})
+    <div id="rake-end"></div>
+    <div id="trim-start"></div>
+    @@include("./html/_trim_form.html", {})
+    @@include("./html/_colors.html", {})
+    @@include("./html/_building_trim.html",{})
+    <div id="hide-menu"></div>
+    <!-- @@include("./html/_about_us.html",{}) -->
+    @@include("./html/_work.html",{})
+    @@include("./html/_other.html",{})
+    @@include("./html/_instagram.html",{})
+    @@include("./html/_questions.html",{})
+    @@include("./html/_footer.html",{})
+    <div id="trim-end"></div>
+  </div>
+
+  <!--Scripts-->
+  <script defer src="js/index.min.js"></script>
+</body>
+
+</html>

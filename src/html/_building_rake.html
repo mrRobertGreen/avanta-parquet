@@ -1,0 +1,96 @@
+<div class="building"  id="building_rake">
+    <div class="building__title">
+        @@include("./_title.html", {
+        text: "Соберите декоративные рейки"
+        })
+    </div>
+    <div class="building__subtitle">
+        @@include("./_subtitle.html", {
+        text: "Отправьте нам сборку и мы проконсультируем Вас"
+        })
+    </div>
+    <div class="types buildings__types" id="types-row-rake">
+        <div class="types__track">
+            <div class="types__item types__item_rake types__item_active" id="rake-with-groove">
+                <div class="types__img">
+                    <img src="../img/img_config/slats1.png" alt="">
+                    <!-- <div class="building__circle pink"></div> -->
+                </div>
+                <div class="types__name">С пазом</div>
+                <img class="tick" src="../img/tick.svg"/>
+            </div>
+            <div class="types__item types__item_rake" id="rake-without-groove">
+                <div class="types__img">
+                    <img src="../img/img_config/slats2.png" alt="">
+                    <!-- <div class="building__circle yellow"></div> -->
+                </div>
+                <div class="types__name">Без паза</div>
+                <img class="tick" src="../img/tick.svg"/>
+            </div>
+        </div>
+    </div>
+    <div class="desktop-grid">
+        <div class="material buildings__material">
+            <div class="material__item material__item_active" id="mdf">МДФ</div>
+            <div class="material__item" id="beech">Бук</div>
+            <div class="material__item" id="oak">Дуб</div>
+            <div class="material__item" id="ash">Ясень</div>
+        </div>
+        <div class="building__style style">
+            <!-- <div class="style__item" >
+                <span id="finish" class="style__span style__span_active">Финишная пленка</span> 
+            </div>
+            <div class="style__item">
+                <span  id="veneer" class="style__span">Шпон</span>
+            </div>
+            <div class="style__item">
+                <span id="dyed" class="style__span">Выкрашенный</span>
+            </div> -->
+        </div>
+        <div class="building__dimensions">
+            <div class="range">
+                <div class="range__title">
+                    Высота: <span class="height-mm">60 мм.</span>
+                </div>
+                <input type="range" class="range__input " value="9" min="0" max="16" id="range-height-rake">
+                <div class="range__numbers _height">
+                    <div>20</div>
+                    <div>30</div>
+                    <div>40</div>
+                    <div>50</div>
+                    <div>60</div>
+                    <div>80</div>
+                    <div>90</div>
+                    <div>100</div>
+                </div>
+            </div>
+            <div class="range" id="thickness">
+                <div class="range__title">
+                    Толщина: <span class="thickness-mm">30 мм.</span>
+                </div>
+                <input type="range" class="range__input" value="5" min="0" max="10" id="range-thickness-rake">
+                <div class="range__numbers _thickness">
+                    <div>20</div>
+                    <div>25</div>
+                    <div>30</div>
+                    <div>40</div>
+                    <div>50</div>
+                </div>
+            </div>
+        </div>
+        <div class="building__size size">
+            <div class="size__metres">
+                Пог. метры
+                <input type="number" class="size__input" value="1" min="1">
+            </div>
+            <div class="size__price">
+                <p>259 ₽</p>
+            </div>
+        </div>
+        <div class="building__btn-wrapper">
+            <button class="building__btn" id="rake-btn">
+                Отправить сборку
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+@import "./vars";
+
+.menu {
+    background: $white;
+    overflow-x: hidden;
+    position: relative;
+    overflow-y: hidden;
+    height: 70px;
+    margin-top: 45px;
+    // box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+    transition: box-shadow 0.3s, height 0.3s;
+    padding-left: -15px;
+    width: calc(100% + 30px);
+
+    @media (min-width: 600px) {
+        margin-left: -30px;
+        width: calc(100% + 60px);
+      }
+      @media (min-width: 1250px) {
+        margin-left: -63px;
+        width: calc(100% + 126px);
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+      }
+
+    &__row {
+        width: 350px;
+        display: flex;
+        padding: 15px 15px 15px 3px;
+        @media (min-width: 450px) {
+            padding-right: 0;
+        }
+    }
+
+    &__btn {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        background: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+        border-radius: 11px;
+        margin: 15px 12px 15px 0;
+        position: relative;
+    }
+
+    &__btn-line {
+        width: 20px;
+        height: 2px;
+        background: $black;
+        border-radius: 2px;
+
+        &:first-child {
+            margin-bottom: 6px;
+        }
+    }
+
+    &__list {}
+
+
+    &__track {
+        display: flex;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15px;
+        @media (min-width: 450px) {
+            padding-left: 0;
+        }
+    }
+    &__item {
+        cursor: pointer;
+        display: block;
+        font-weight: 500;
+        font-size: 15px;
+        padding: 13px 20px;
+        margin-right: 15px;
+        background: $light-grey;
+        color: $grey;
+        border-radius: 11px;
+        height: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__item_active {
+        background: $white;
+        color: $black;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+    }
+}
+.dropbox {
+    width: 100%;
+    padding: 5px 15px 20px;
+    background: $white;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    &__link {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        font-size: 17px;
+        line-height: 35px;
+        color: $black;
+    }
+}
+
+.menu_fake {
+    height: 70px;
+    width: 100%;
+    margin-top: 45px;
+    display: none;
+    transition: height 0.3s;
+}
+
+.menu._fixed {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+    // left: 15px;
+    margin-left: 0;
+    left: 0;
+    padding-left: 15px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+
+    @media (min-width: 450px) {
+        padding-left: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.menu._opened-list, .menu_fake._opened-list {
+    height: 185px;
+}
