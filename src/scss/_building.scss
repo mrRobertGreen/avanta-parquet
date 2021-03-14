@@ -9,7 +9,7 @@
     }
 
     &__dimensions {
-        padding-top: 30px;
+        // padding-top: 30px;
     }
 
     &__btn-wrapper {
@@ -43,20 +43,31 @@
 }
 .texture {
     grid-area: tex;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
     &__title {
+        // align-self: start;
+        max-width: 617px;
+        width: 100%;
         p {
             text-align: left;
+            width: 100%;
         }
     }
     &__type {
+        max-width: 617px;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 15px;
         padding-top: 45px;
+        // background: #000;
     }
     &__item {
-        width: 112px;
+        width: calc(63px + (112px - 62px) * (100vw - 320px) / (1200 - 1000));
+
         img {
             width: 100%;
             height: 100%;
@@ -65,7 +76,8 @@
 }
 
 .range {
-    padding: 40px 15px 0 15px;
+    // padding: 40px 15px 0 15px;
+    width: 100%;
 
     &__title {
         font-size: 15px;
@@ -126,8 +138,10 @@
 }
 .size {
     display: flex;
-    align-items: center;
-    padding-top: 38px;
+    flex-direction: column;
+    // align-items: center;
+
+    // padding-top: 38px;
     padding: 38px 15px 0 15px;
 
     &__metres {
@@ -165,19 +179,19 @@
         -moz-appearance: textfield;
     }
 
-    &__list {
-        background: $white;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
-        position: absolute;
-        right: 250px;
-        z-index: 100;
-        overflow: hidden;
-        height: 140px;
+    // &__list {
+    //     background: $white;
+    //     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+    //     position: absolute;
+    //     right: 250px;
+    //     z-index: 100;
+    //     overflow: hidden;
+    //     height: 140px;
 
-        div {
-            padding: 5px 15px;
-        }
-    }
+    //     div {
+    //         padding: 5px 15px;
+    //     }
+    // }
 
     &__price {
         background: $light-grey;
@@ -208,9 +222,9 @@
     grid-area: chos;
     width: 100%;
     padding-top: 45px;
+
     img {
         width: 100%;
-        
     }
 }
 .calc {
@@ -226,21 +240,30 @@
         grid-template-areas:
             "chos tex"
             "chos cal";
+
+        &__btn-wrapper {
+            display: block;
+            width: auto;
+            padding-top: 63px;
+        }
     }
 
     .building__dimensions {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-top: 100px;
+        // padding-top: 100px;
         height: 100%;
+        width: 100%;
     }
 
     .range {
         padding: 0;
+        // width: 345px;
+        width: 100%;
     }
     .size {
-        flex-direction: column;
+        // flex-direction: column;
         grid-area: size;
         padding-top: 0;
 
@@ -263,18 +286,32 @@
         margin: 0;
         max-width: 165px;
     }
+    .texture {
+        align-items: flex-end;
+    }
 
     .chosen {
         flex: 0 0 25%;
         padding-top: 75px;
         width: auto;
+        position: relative;
 
         img {
             width: 350px;
             padding: 0 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
     }
     .calc {
+        display: flex;
+        justify-content: flex-end;
+        max-height: 265px;
+        justify-content: space-between;
+    }
+
+    .limiter {
         max-width: 617px;
     }
 }
