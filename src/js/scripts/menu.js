@@ -145,6 +145,7 @@ $("#rake_forms .rake-form__elem").on("click", (e) => {
 $("#building_rake .material__item").on("click", (e) => toggleActiveClass(e, "#building_rake .material__item", "material__item_active"))
 $("#building_plintus .material__item").on("click", (e) => toggleActiveClass(e, "#building_plintus .material__item", "material__item_active"))
 $("#building_trim .material__item").on("click", (e) => toggleActiveClass(e, "#building_trim .material__item", "material__item_active"))
+$("#building_plintus .texture__item").on("click", (e) => toggleActiveClass(e, "#building_plintus .texture__item", "texture__item_active"))
 $(".style__span").on("click", (e) => toggleActiveClass(e, ".style__span", "style__span_active"))
 
 $(window).scroll(function () {
