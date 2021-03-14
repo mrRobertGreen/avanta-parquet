@@ -234,12 +234,12 @@
 @media (min-width: 1000px) {
     .building {
         padding-top: 191px;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-            "chos tex"
-            "chos cal";
+        // display: grid;
+        // grid-template-columns: 1fr 2fr;
+        // grid-template-rows: 1fr 1fr;
+        // grid-template-areas:
+        //     "chos tex"
+        //     "chos cal";
 
         &__btn-wrapper {
             display: block;
@@ -253,14 +253,18 @@
         flex-direction: column;
         justify-content: space-between;
         // padding-top: 100px;
-        height: 100%;
         width: 100%;
+        margin-right: 45px;
     }
 
     .range {
         padding: 0;
         // width: 345px;
         width: 100%;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     .size {
         // flex-direction: column;
@@ -287,11 +291,18 @@
         max-width: 165px;
     }
     .texture {
-        align-items: flex-end;
+        // align-items: flex-end;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        &__grid {
+            min-width: 617px;
+            flex: 1 0 50%;
+        }
     }
 
     .chosen {
-        flex: 0 0 25%;
+        flex: 0 1 50%;
         padding-top: 75px;
         width: auto;
         position: relative;
@@ -299,19 +310,22 @@
         img {
             width: 350px;
             padding: 0 15px;
-            position: fixed;
+            // position: fixed;
             top: 0;
             left: 0;
         }
     }
-    .calc {
+    .calc-wrapper {
+        width: 100%;
         display: flex;
         justify-content: flex-end;
-        max-height: 265px;
-        justify-content: space-between;
+        padding-top: 100px;
     }
-
-    .limiter {
-        max-width: 617px;
+    .calc {
+        // max-height: 265px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 680px;
+        min-width: 617px;
     }
 }
