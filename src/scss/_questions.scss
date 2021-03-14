@@ -3,6 +3,8 @@
     flex-direction: column;
     padding-top: 100px;
     align-items: center;
+    background-color: $white;
+    // margin-bottom: 60px;
 
     &__pic {
         width: calc(320px + (670 - 320) * (100vw - 320px) / (1800 - 320));

@@ -1,49 +1,102 @@
 <div class="building" id="building_plintus">
-    <div class="building__title">
-        @@include("./_title.html", {
-        text: "Соберите плинтус"
-        })
-    </div>
-    <div class="building__dimensions">
-        <div class="range">
-            <div class="range__title">
-                Высота: <span class="height-mm">мм.</span>
+    <div class="texture">
+        <div class="texture__title">
+            @@include("./_title.html", {
+            text: "Выберите текстуру"
+            })
+        </div>
+        <div class="texture__type">
+            <div class="texture__item">
+                <img src="../img/text1.jpg" alt="">
             </div>
-            <input type="range" class="range__input" value="5" min="0" max="10" id="range-height-plintus">
-            <div class="range__numbers _height">
-                <div>70</div>
-                <div>80</div>
-                <div>100</div>
-                <div>120</div>
-                <div>150</div>
+            <div class="texture__item">
+                <img src="../img/text2.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text3.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text4.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text5.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text6.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text7.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text8.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text9.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text10.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text11.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text12.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text13.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text14.jpg" alt="">
+            </div>
+            <div class="texture__item">
+                <img src="../img/text15.jpg" alt="">
             </div>
         </div>
-        <div class="range" id="thickness">
-            <div class="range__title">
-                Толщина: <span class="thickness-mm">мм.</span>
+    </div>
+    <div class="chosen">
+        <img src="../img/text5.jpg" alt="">
+    </div>
+    <div class="calc">
+        <div class="building__dimensions">
+            <div class="range">
+                <div class="range__title">
+                    Высота: <span class="height-mm">мм.</span>
+                </div>
+                <input type="range" class="range__input" value="5" min="0" max="10" id="range-height-plintus">
+                <div class="range__numbers _height">
+                    <div>70</div>
+                    <div>80</div>
+                    <div>100</div>
+                    <div>120</div>
+                    <div>150</div>
+                </div>
             </div>
-            <input type="range" class="range__input" value="5" min="0" max="8" id="range-thickness-plintus">
-            <div class="range__numbers _thickness">
-                <div>10</div>
-                <div>12</div>
-                <div>16</div>
-                <div>18</div>
+            <div class="range" id="thickness">
+                <div class="range__title">
+                    Толщина: <span class="thickness-mm">мм.</span>
+                </div>
+                <input type="range" class="range__input" value="5" min="0" max="8" id="range-thickness-plintus">
+                <div class="range__numbers _thickness">
+                    <div>10</div>
+                    <div>12</div>
+                    <div>16</div>
+                    <div>18</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="building__size size">
-        <div class="size__metres">
-            Пог. метры
-            <input type="number" class="size__input" value="1" min="1">
+        <div class="building__size size">
+            <div class="size__metres">
+                Пог. метры
+                <input type="number" class="size__input" value="1" min="1">
+            </div>
+            <div class="size__price">
+                <p>213 ₽</p>
+            </div>
         </div>
-        <div class="size__price">
-            <p>213 ₽</p>
+        <div class="building__btn-wrapper">
+            <button class="building__btn" id="plintus-btn">
+                Отправить сборку
+            </button>
         </div>
     </div>
-    <div class="building__btn-wrapper">
-        <button class="building__btn" id="plintus-btn">
-            Отправить сборку
-        </button>
-    </div>
-</div>
 </div>
