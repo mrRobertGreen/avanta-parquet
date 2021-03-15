@@ -2,31 +2,32 @@ const setPrice = (selector, value) => {
     $(selector).html(`<p>${value} ₽</p>`)
 }
 const calculatePrice = (product) => {
-    const {type, thickness, height, metres} = product
+    const {
+        id,
+        thickness,
+        width,
+        metres
+    } = product
     const priceData = getPriceDataByProductName(product.name)
-    let price = getItemFromTree(priceData, [type, thickness, height])
+    const type = getProductTypeById(id)
+    let price = getItemFromTree(priceData, [type, thickness, width])
     return price * metres
+}
+const getProductTypeById = (id) => {
+    if (low.indexOf(id) !== -1) {
+        return "low"
+    }
+    if (mid.indexOf(id) !== -1) {
+        return "mid"
+    }
+    if (high.indexOf(id) !== -1) {
+        return "high"
+    }
 }
 const getPriceDataByProductName = (name) => {
     switch (name) {
-        case "Плинтус":
-            if (plintus.category === "mdf") {
-                return plintusMDFPrices
-            } else {
-                return plintusMassifPrices
-            }
-        case "Рейка":
-            if (rake.category === "mdf") {
-                return rakeMDFPrices
-            } else {
-                return rakeMassifPrices
-            }
-        case "Наличник":
-            if (trim.category === "mdf") {
-                return trimMDFPrices
-            } else {
-                return trimMassifPrices
-            }
+        case "Инженерная доска":
+            return boardPrices
         default:
             break;
     }
@@ -42,25 +43,21 @@ const setRangeValues = (selector, values) => {
 const setRangeStyle = (selector, count) => {
     const $elem = $(selector)
     switch (count) {
-        case 4:
-            $elem.attr("max", "8")
+        case 1:
+            $elem.attr("max", "2")
             return
-        case 5:
-            $elem.attr("max", "10")
+        case 2:
+            $elem.attr("max", "4")
             return
-        case 6:
-            $elem.attr("max", "12")
-            return
-        case 8:
-            $elem.attr("max", "16")
+        case 3:
+            $elem.attr("max", "6")
             return
         default:
             return
     }
 }
-const getHeights = (priceData, type) => {
-    const someThickness = Object.keys(priceData[type])[0]
-    return Object.keys(priceData[type][someThickness])
+const getWidths = (priceData, type, thickness) => {
+    return Object.keys(priceData[type][thickness])
 }
 const getThicknesses = (priceData, type) => {
     return Object.keys(priceData[type])
@@ -93,5 +90,16 @@ const getItemFromTree = (tree, keys, idx = 0) => {
         return tree[keys[idx]]
     } else {
         return getItemFromTree(tree[keys[idx]], keys, ++idx)
+    }
+}
+let inputReloadingTimer = false
+const reloadInputRange = () => {
+    if (!inputReloadingTimer) {
+        inputReloadingTimer = setTimeout(() => {
+            initRangeFillLower()
+        }, 0)
+    } else {
+        clearInterval(inputReloadingTimer)
+        inputReloadingTimer = false
     }
 }

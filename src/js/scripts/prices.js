@@ -39,11 +39,27 @@ const boardPrices = {
         },
     }
 }
-
-const getItemFromTree = (tree, keys, idx = 0) => {
-    if (idx === keys.length - 1 || tree[keys[idx]] === undefined) {
-        return tree[keys[idx]]
-    } else {
-        return getItemFromTree(tree[keys[idx]], keys, ++idx)
-    }
-}
+const low = [
+    "agat",
+    "gluver",
+    "fidji",
+    "argentum",
+    "paladium",
+]
+const mid = [
+    "karelia",
+    "millenium",
+    "marsel",
+    "milan",
+    "gefest",
+    "atlant",
+]
+const high = [
+    "alikante",
+    "safari",
+    "daysen",
+    "oxford",
+    "bergamo",
+    "deonis",
+    "grey"
+]
