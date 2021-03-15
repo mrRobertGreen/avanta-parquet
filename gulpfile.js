@@ -44,7 +44,7 @@ let path = {
 		js: [src_folder + "/js/index.js", src_folder + "/js/libs.js"],
 		php: [src_folder + "/php/**"],
 		css: [src_folder + "/scss/*.scss", "!" + src_folder + "/_*.scss"],
-		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
+		images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml}", "!**/favicon.*"],
 		fonts: src_folder + "/fonts/*.ttf",
 	},
 	watch: { // пути к файлам, за изменениями которых, хотим следить

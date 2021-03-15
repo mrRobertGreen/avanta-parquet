@@ -1,10 +1,10 @@
 const connectPopupForm = document.getElementById('connect-popup-form');
 const questionsForm = document.getElementById('questions-form');
 const deliveryForm = document.getElementById('delivery-form');
-const buildPopupForm = document.getElementById('build-popup-form');
+// const buildPopupForm = document.getElementById('build-popup-form');
 
 connectPopupForm.addEventListener('submit', (e) => formSend(e, connectPopupForm));
-buildPopupForm.addEventListener('submit', (e) => formSend(e, buildPopupForm));
+// buildPopupForm.addEventListener('submit', (e) => formSend(e, buildPopupForm));
 deliveryForm.addEventListener('submit', (e) => formSend(e, deliveryForm));
 questionsForm.addEventListener('submit', (e) => formSend(e, questionsForm));
 let isCooperation = false

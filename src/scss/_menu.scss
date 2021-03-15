@@ -15,18 +15,19 @@
     @media (min-width: 600px) {
         margin-left: -30px;
         width: calc(100% + 60px);
-      }
-      @media (min-width: 1250px) {
+    }
+
+    @media (min-width: 1250px) {
         margin-left: -63px;
         width: calc(100% + 126px);
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
-      }
+    }
 
     &__row {
-        width: 350px;
         display: flex;
         padding: 15px 15px 15px 3px;
-        @media (min-width: 450px) {
+
+        @media (min-width: 625px) {
             padding-right: 0;
         }
     }
@@ -70,10 +71,12 @@
         justify-content: center;
         align-items: center;
         padding-left: 15px;
-        @media (min-width: 450px) {
+
+        @media (min-width: 625px) {
             padding-left: 0;
         }
     }
+
     &__item {
         cursor: pointer;
         display: block;
@@ -85,9 +88,19 @@
         color: $grey;
         border-radius: 11px;
         height: 40px;
+        line-height: 15px;
 
-        &:last-child {
-            margin-right: 0;
+        &:nth-child(1) {
+            width: 176px;
+        }
+        &:nth-child(2) {
+            width: 159px;
+        }
+        &:nth-child(3) {
+            width: 171px;
+            @media (min-width: 625px) {
+                margin-right: 0;
+            }
         }
     }
 
@@ -97,13 +110,15 @@
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
     }
 }
+
 .dropbox {
     width: 100%;
     padding: 5px 15px 20px;
     background: $white;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 590px;
     width: 100%;
+
     &__link {
         display: block;
         width: 100%;
@@ -130,19 +145,19 @@
     margin-bottom: 0;
     padding-top: 0;
     width: 100%;
-    // left: 15px;
     margin-left: 0;
     left: 0;
     padding-left: 15px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
 
-    @media (min-width: 450px) {
+    @media (min-width: 625px) {
         padding-left: 0;
         left: 0;
         right: 0;
     }
 }
 
-.menu._opened-list, .menu_fake._opened-list {
+.menu._opened-list,
+.menu_fake._opened-list {
     height: 185px;
 }
