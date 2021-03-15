@@ -39,6 +39,22 @@ const boardPrices = {
         },
     }
 }
+const hungarianPrices = {
+    all: {
+        12: {
+            90: 3480,
+            130: 3625,
+            160: 3915,
+        },
+        15: {
+            130: 3988,
+        },
+        16: {
+            90: 3843,
+            160: 4278,
+        },
+    },
+}
 const low = [
     "agat",
     "gluver",

@@ -24,6 +24,7 @@ const getProductTypeById = (id) => {
     if (high.indexOf(id) !== -1) {
         return "high"
     }
+    return "all"
 }
 const getPriceDataByProductName = (name) => {
     switch (name) {

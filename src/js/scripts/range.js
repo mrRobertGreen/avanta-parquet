@@ -3,6 +3,10 @@ const initRangeFillLower = () => {
         selectors: [
             "range-width-board",
             "range-thickness-board",
+            "range-width-hungarian",
+            "range-thickness-hungarian",
+            "range-width-french",
+            "range-thickness-french",
         ],
         color: "#0095F6"
     });
