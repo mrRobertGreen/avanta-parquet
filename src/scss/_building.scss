@@ -249,16 +249,31 @@
 .texture__item_active {
     opacity: 0.5;
     position: relative;
-    &::before{
-        content: url("../img/line.jpg");
-        width: 36px;
-        
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background-color: red;
+    div {
+        display: block;
     }
 }
+// .check {
+//     // display: none;
+//     position: absolute;
+//     top: 32px;
+//     left: 18px;
+
+//     &__first {
+//         background-color: red;
+//         border-radius: 25px;
+//         height: 11px;
+//         width: 40px;
+        
+//     }
+//     &__second {
+//         background-color: red;
+//         border-radius: 25px;
+//         height: 11px;
+//         width: 90px;
+
+//     }
+// }
 
 @media (min-width: 1000px) {
     .building {
@@ -322,7 +337,6 @@
     .building__btn {
         margin: 0;
         // max-width: 165px;
-        
     }
     .texture {
         // align-items: flex-end;
