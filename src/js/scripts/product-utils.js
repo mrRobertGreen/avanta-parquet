@@ -1,4 +1,5 @@
 const setPrice = (selector, value) => {
+    if (isNaN(+value)) return
     $(selector).html(`<p>${value} ₽</p>`)
 }
 const calculatePrice = (product) => {
@@ -92,14 +93,13 @@ const getItemFromTree = (tree, keys, idx = 0) => {
         return getItemFromTree(tree[keys[idx]], keys, ++idx)
     }
 }
-let inputReloadingTimer = false
+let isEnableReloadingInputRange = true
 const reloadInputRange = () => {
-    if (!inputReloadingTimer) {
-        inputReloadingTimer = setTimeout(() => {
+    if (isEnableReloadingInputRange) {
+        isEnableReloadingInputRange = false
+        setTimeout(() => {
             initRangeFillLower()
-        }, 0)
-    } else {
-        clearInterval(inputReloadingTimer)
-        inputReloadingTimer = false
+            isEnableReloadingInputRange = true
+        }, 20)
     }
 }

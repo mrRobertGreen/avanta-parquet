@@ -10,15 +10,27 @@ const rangeValueToThicknessBoard = (value) => {
             return 12
     }
 }
-const rangeValueToWidthBoard = (value) => {
-    switch (+value) {
-        case 1:
-            return 130
-        case 3:
-            return 150
-        default:
-            return 130
+const rangeValueToWidthBoard = (widthValue, thickness) => {
+    if (thickness === 16) {
+        switch (+widthValue) {
+            case 1:
+                return 160
+            case 3:
+                return 180
+            default:
+                return 160
+        }
+    } else {
+        switch (+widthValue) {
+            case 1:
+                return 130
+            case 3:
+                return 150
+            default:
+                return 130
+        }
     }
+
 }
 const rangeValueToHeightPlintus = (category, type, value) => {
     if (category === "mdf") {
