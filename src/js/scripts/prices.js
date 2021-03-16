@@ -71,7 +71,7 @@ const frenchPrices = {
 }
 const low = [
     "agat",
-    "gluver",
+    "glover",
     "fidji",
     "argentum",
     "paladium",
