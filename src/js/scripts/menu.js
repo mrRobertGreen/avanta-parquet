@@ -146,6 +146,8 @@ $(".menu__item").on("click", (e) => toggleActiveClass(e, ".menu__item", "menu__i
 // $("#building_plintus .material__item").on("click", (e) => toggleActiveClass(e, "#building_plintus .material__item", "material__item_active"))
 // $("#building_trim .material__item").on("click", (e) => toggleActiveClass(e, "#building_trim .material__item", "material__item_active"))
 $("#building_board .texture__item").on("click", (e) => toggleActiveClass(e, "#building_board .texture__item", "texture__item_active"))
+$("#building_french .texture__item").on("click", (e) => toggleActiveClass(e, "#building_french .texture__item", "texture__item_active"))
+$("#building_hungarian .texture__item").on("click", (e) => toggleActiveClass(e, "#building_hungarian .texture__item", "texture__item_active"))
 // $(".style__span").on("click", (e) => toggleActiveClass(e, ".style__span", "style__span_active"))
 
 $(window).on("scroll", function () {

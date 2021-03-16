@@ -19,7 +19,7 @@ $("#range-thickness-board").on("input", (e) => {
     board.thickness = thickness
     const price = calculatePrice(board)
     setPrice("#building_board .size__price", price)
-    const type = getProductTypeById(board.id)
+    const type = getProductTypeById(board.id, board.name)
     const widths = getWidths(boardPrices, type, board.thickness)
     setRangeValues("#building_board ._width", widths)
     setRangeStyle("#range-width-board", widths.length)

@@ -7,29 +7,37 @@ const calculatePrice = (product) => {
         id,
         thickness,
         width,
-        metres
+        metres,
+        name
     } = product
     const priceData = getPriceDataByProductName(product.name)
-    const type = getProductTypeById(id)
+    const type = getProductTypeById(id, name)
     let price = getItemFromTree(priceData, [type, thickness, width])
     return price * metres
 }
-const getProductTypeById = (id) => {
-    if (low.indexOf(id) !== -1) {
-        return "low"
+const getProductTypeById = (id, name) => {
+    if (name === "Инженерная доска") {
+        if (low.indexOf(id) !== -1) {
+            return "low"
+        }
+        if (mid.indexOf(id) !== -1) {
+            return "mid"
+        }
+        if (high.indexOf(id) !== -1) {
+            return "high"
+        }
+    } else {
+        return "all"
     }
-    if (mid.indexOf(id) !== -1) {
-        return "mid"
-    }
-    if (high.indexOf(id) !== -1) {
-        return "high"
-    }
-    return "all"
 }
 const getPriceDataByProductName = (name) => {
     switch (name) {
         case "Инженерная доска":
             return boardPrices
+        case "Венгерская ёлка":
+            return hungarianPrices
+        case "Французская ёлка":
+            return frenchPrices
         default:
             break;
     }

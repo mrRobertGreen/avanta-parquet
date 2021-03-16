@@ -55,6 +55,20 @@ const hungarianPrices = {
         },
     },
 }
+const frenchPrices = {
+    all: {
+        12: {
+            90: 4640,
+            130: 4858,
+        },
+        15: {
+            130: 5293,
+        },
+        16: {
+            90: 5075,
+        },
+    },
+}
 const low = [
     "agat",
     "gluver",

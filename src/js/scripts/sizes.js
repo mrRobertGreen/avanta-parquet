@@ -66,3 +66,31 @@ const rangeValueToWidthHungarian = (widthValue, thickness) => {
         }
     } else return 130
 }
+const rangeValueToThicknessFrench = (value) => {
+    switch (+value) {
+        case 1:
+            return 12
+        case 3:
+            return 15
+        case 5:
+            return 16
+        default:
+            return 12
+    }
+}
+const rangeValueToWidthFrench = (widthValue, thickness) => {
+    if (thickness === 12) {
+        switch (+widthValue) {
+            case 1:
+                return 90
+            case 3:
+                return 130
+            default:
+                return 90
+        }
+    } else if (thickness === 16) {
+        return 90
+    } else {
+        return 130
+    }
+}

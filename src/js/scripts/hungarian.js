@@ -1,5 +1,5 @@
 const hungarian = {
-    name: "Венгеская ёлка",
+    name: "Венгерская ёлка",
     id: "agat",
     width: 130,
     thickness: 15,
@@ -19,7 +19,7 @@ $("#range-thickness-hungarian").on("input", (e) => {
     hungarian.thickness = thickness
     const price = calculatePrice(hungarian)
     setPrice("#building_hungarian .size__price", price)
-    const type = getProductTypeById(hungarian.id)
+    const type = getProductTypeById(hungarian.id, hungarian.name)
     const widths = getWidths(hungarianPrices, type, hungarian.thickness)
     setRangeValues("#building_hungarian ._width", widths)
     setRangeStyle("#range-width-hungarian", widths.length)
