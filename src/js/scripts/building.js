@@ -19,21 +19,26 @@ $(window).resize(chahgeSubmitButtonText)
 
 $(window).on("scroll", function () {
     // sticky-эффект у выбранной текстуры
+    stickyChosenImageFlow("building_board")
+    stickyChosenImageFlow("building_hungarian")
+    stickyChosenImageFlow("building_french")
+})
+const stickyChosenImageFlow = (productId) => {
     if (window.matchMedia("(max-width: 1000px)").matches) return
     const marginTopStart = 75
     const marginBottomFinish = 45
-    const start = document.querySelector("#building_board .texture__title").offsetTop + window.innerHeight - marginTopStart
-    const finish = document.querySelector("#building_board .calc-wrapper").offsetTop + window.innerHeight - marginBottomFinish
+    const start = document.querySelector(`#${productId} .texture__title`).offsetTop + window.innerHeight - marginTopStart
+    const finish = document.querySelector(`#${productId} .calc-wrapper`).offsetTop + window.innerHeight - marginBottomFinish
     const scrollTop = $(window).scrollTop()
     if (scrollTop >= start && scrollTop <= finish) {
-        $("#building_board .chosen").addClass("_fixed");
-        $("#building_board .chosen_down").addClass("_hidden")
+        $(`#${productId} .chosen`).addClass("_fixed");
+        $(`#${productId} .chosen_down`).addClass("_hidden")
     }
     if (scrollTop < start) {
-        $("#building_board .chosen").removeClass("_fixed");
+        $(`#${productId} .chosen`).removeClass("_fixed");
     }
     if (scrollTop > finish) {
-        $("#building_board .chosen").removeClass("_fixed");
-        $("#building_board .chosen_down").removeClass("_hidden")
+        $(`#${productId} .chosen`).removeClass("_fixed");
+        $(`#${productId} .chosen_down`).removeClass("_hidden")
     }
-})
+}
