@@ -28,12 +28,6 @@
 		if(trim(!empty($_POST['name']))){
 			$body.='<p><strong>Название:</strong> '.$_POST['name'].'</p>';
 		}
-		if(trim(!empty($_POST['category']))){
-			$body.='<p><strong>Категория:</strong> '.$_POST['category'].'</p>';
-		}
-		if(trim(!empty($_POST['form']))){
-			$body.='<p><strong>Форма:</strong> '.$_POST['form'].'</p>';
-		}
 		if(trim(!empty($_POST['type']))){
 			$body.='<p><strong>Тип:</strong> '.$_POST['type'].'</p>';
 		}
@@ -41,7 +35,7 @@
 			$body.='<p><strong>Толщина:</strong> '.$_POST['thickness'].'</p>';
 		}
 		if(trim(!empty($_POST['height']))){
-			$body.='<p><strong>Высота:</strong> '.$_POST['height'].'</p>';
+			$body.='<p><strong>Ширина:</strong> '.$_POST['width'].'</p>';
 		}
 		if(trim(!empty($_POST['metres']))){
 			$body.='<p><strong>Метры:</strong> '.$_POST['metres'].'</p>';

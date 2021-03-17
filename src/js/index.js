@@ -13,5 +13,5 @@ $(window).on("load", function () {
 @@include("./scripts/popups.js")
 @@include("./scripts/header.js")
 @@include("./scripts/range.js")
-// @include("./scripts/form.js")
+@@include("./scripts/form.js")
 })

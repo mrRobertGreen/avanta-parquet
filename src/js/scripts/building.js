@@ -18,12 +18,11 @@ $(window).resize(chahgeSubmitButtonText)
 
 
 $(window).on("scroll", function () {
-    // sticky-эффект у выбранной текстуры
     stickyChosenImageFlow("building_board")
     stickyChosenImageFlow("building_hungarian")
     stickyChosenImageFlow("building_french")
 })
-const stickyChosenImageFlow = (productId) => {
+const stickyChosenImageFlow = (productId) => {  // sticky-эффект у выбранной текстуры
     if (window.matchMedia("(max-width: 1000px)").matches) return
     const marginTopStart = 75
     const marginBottomFinish = 45

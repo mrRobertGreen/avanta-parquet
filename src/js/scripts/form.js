@@ -1,11 +1,11 @@
 const connectPopupForm = document.getElementById('connect-popup-form');
 const questionsForm = document.getElementById('questions-form');
-const deliveryForm = document.getElementById('delivery-form');
-// const buildPopupForm = document.getElementById('build-popup-form');
+// const deliveryForm = document.getElementById('delivery-form');
+const buildPopupForm = document.getElementById('build-popup-form');
 
 connectPopupForm.addEventListener('submit', (e) => formSend(e, connectPopupForm));
-// buildPopupForm.addEventListener('submit', (e) => formSend(e, buildPopupForm));
-deliveryForm.addEventListener('submit', (e) => formSend(e, deliveryForm));
+buildPopupForm.addEventListener('submit', (e) => formSend(e, buildPopupForm));
+// deliveryForm.addEventListener('submit', (e) => formSend(e, deliveryForm));
 questionsForm.addEventListener('submit', (e) => formSend(e, questionsForm));
 let isCooperation = false
 
@@ -17,6 +17,7 @@ async function formSend(e, form) {
 	let error = null
 
 	if (form.id === "build-popup-form") {
+		console.log(buildingData);
 		for (const key in buildingData) {
 			if (Object.hasOwnProperty.call(buildingData, key)) {
 				const element = buildingData[key];
