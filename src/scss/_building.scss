@@ -418,10 +418,15 @@
             height: 267px;
             left: 63px;
             top: calc(70px + 75px);
-            &::before {
-                content: "Name";
-                background-color: red;
-            }
+
+            // &::before {
+            //     content: "Name";
+            //     position: absolute;
+            //     top: -50px;
+            //     left: -50px;
+            //     z-index: 1000;
+            //     // background-color: red;
+            // }
         }
         p {
             position: fixed;
