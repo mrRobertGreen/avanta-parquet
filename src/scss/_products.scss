@@ -27,12 +27,10 @@
 .products.mt-100vh {
     margin-top: 100vh;
 }
-.product {
+._product {
     img {
         width: 100%;
-        padding-left: 27px;
         border-radius: 25px;
-        padding-top: 21px;
     }
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.11);
     border-radius: 25px;
@@ -40,26 +38,20 @@
     display: block;
     transition: transform ease 0.3s;
     overflow: hidden;
+    position: relative;
     &:hover {
-      transition: 0.3s;
-      transform:scale(1.03);
+        transition: 0.3s;
+        transform: scale(1.03);
     }
 
-    &__container {
-        padding: 35px 0 0 27px;
-    }
     &__title {
-        font-weight: 500;
-
-        font-size: 21px;
-        line-height: 25px;
-        color: $dark;
-    }
-    &__subtitle {
-        font-size: 15px;
+        font-size: 27px;
         line-height: 23px;
-        color: $grey;
-        padding-top: 13px;
+
+        color: $white;
+        position: absolute;
+        top: 40px;
+        left: 30px;
     }
 }
 .service {
@@ -98,7 +90,7 @@
 }
 .pink {
     background: $pink;
-    
+
     background-image: url("../img/little2.png");
     @include back;
 }
@@ -112,6 +104,14 @@
     max-width: 197px;
 }
 
+@media (max-width: 330px) {
+    ._product {
+        &__title {
+            top: 30px;
+            left: 20px;
+        }
+    }
+}
 @media (max-width: 580px) {
     .products {
         &__services {
@@ -124,11 +124,6 @@
         }
         .service {
             flex: 0 0 25%;
-        }
-    }
-    .product {
-        &__container {
-            padding: 35px 0 0 17px;
         }
     }
 }
@@ -152,7 +147,7 @@
             grid-gap: 20px;
         }
     }
-    .product {
+    ._product {
         width: calc(391px + (391px - 311px) * (100vw - 320px) / (1600px - 320px));
         height: calc(325px + (325px - 311px) * (100vw - 320px) / (1600px - 320px));
     }
@@ -169,13 +164,9 @@
             align-items: center;
         }
     }
-    .product {
+    ._product {
         width: calc(391px + (391px - 309px) * (100vw - 320px) / (1600px - 320px));
         height: calc(325px + (325px - 309px) * (100vw - 320px) / (1600px - 320px));
-
-        &__title {
-            font-size: 25px;
-        }
     }
     .service {
         flex: 0 0 25%;
