@@ -110,7 +110,7 @@
         }
 
         &__text {
-            max-width: 568px;
+            max-width: 610px;
         }
 
         &__buttons {
@@ -137,12 +137,13 @@
         width: 100%;
 
         &__pics {
-            flex: 0 0 40%;
+            flex: 0 0 35%;
         }
 
         &__text {
-            flex: 0 0 50%;
+            flex: 0 0 60%;
             padding-top: 0;
+            max-width: 1000px;
         }
 
         &__pretitle {
@@ -157,11 +158,6 @@
             font-size: 40px;
             line-height: 47px;
             color: $dark;
-
-            span {
-                color: $dark-blue;
-            }
-
             padding-top: 12px;
         }
 
