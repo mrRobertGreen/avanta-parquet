@@ -320,6 +320,13 @@
         }
     }
 }
+@media (min-width: 1250px) {
+    .chosen._fixed {
+        img {
+            left: 63px;
+        }
+    }
+}
 
 @media (min-width: 1000px) {
     .building {
