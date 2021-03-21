@@ -44,3 +44,33 @@ $("#building_board .size__input").on("input", (e) => {
 $("#building_board .texture__item").on("click", (e) => {
     board.id = $(e.currentTarget).attr("id")
 })
+
+
+// active slide changing
+const board_imgs = {
+    "agat": "../img/Desk/агат.jpg",
+    "alikante": "../img/Desk/аликанте.jpg",
+    "atlant": "../img/Desk/атлант.jpg",
+    "bergamo": "../img/Desk/бергамо.jpg",
+    "gaover_3": "../img/Desk/гаовер_3.jpg",
+    "gefest": "../img/Desk/гефест.jpg",
+    "daysen": "../img/Desk/дайсен.jpg",
+    "deonis": "../img/Desk/деонис.jpg",
+    "karelia": "../img/Desk/карелия.jpg",
+    "konkord": "../img/Desk/конкорд.jpg",
+    "marsel": "../img/Desk/марсель.jpg",
+    "milan": "../img/Desk/милан.jpg",
+    "millenium": "../img/Desk/миллениум.jpg",
+    "oxford": "../img/Desk/оксфорд.jpg",
+    "paladium": "../img/Desk/палладиум.jpg",
+}
+$("#building_board .texture__item").on("click", (e) => {
+    const id = $(e.currentTarget).attr("id")
+    const img = $(".chosen__img")
+    const src = board_imgs[id]
+    
+    img.attr('src', src)
+    const picture = $("#building_board .chosen picture").attr("srcset", src)
+    const source = $("#building_board .chosen source").attr("srcset", src)
+    // console.log(img.attr('src'));
+})

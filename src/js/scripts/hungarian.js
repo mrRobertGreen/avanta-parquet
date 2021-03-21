@@ -44,3 +44,35 @@ $("#building_hungarian .size__input").on("input", (e) => {
 $("#building_hungarian .texture__item").on("click", (e) => {
     hungarian.id = $(e.currentTarget).attr("id")
 })
+
+
+
+// active slide changing
+const hun_imgs = {
+    "agat": "../img/French/agat.jpg",
+    "alikante": "../img/French/alikante.jpg",
+    "atlant": "../img/French/atlant.jpg",
+    "bergamo": "../img/French/bergamo.jpg",
+    "gaover_3": "../img/Desk/гаовер_3.jpg",
+    "gefest": "../img/Desk/гефест.jpg",
+    "daysen": "../img/Desk/дайсен.jpg",
+    "deonis": "../img/Desk/деонис.jpg",
+    "karelia": "../img/Desk/карелия.jpg",
+    "konkord": "../img/Desk/конкорд.jpg",
+    "marsel": "../img/Desk/марсель.jpg",
+    "milan": "../img/Desk/милан.jpg",
+    "millenium": "../img/Vengerian/millenium.jpg",
+    "oxford": "../img/Vengerian/oxford.jpg",
+    "palladium": "../img/Vengerian/palladium.jpg",
+    "argentum": "../img/Vengerian/argentum.jpg"
+}
+$("#building_hungarian .texture__item").on("click", (e) => {
+    const id = $(e.currentTarget).attr("id")
+    const img = $(".chosen__img")
+    const src = hun_imgs[id]
+
+    img.attr('src', src)
+    const picture = $("#building_hungarian .chosen picture").attr("srcset", src)
+    const source = $("#building_hungarian .chosen source").attr("srcset", src)
+    // console.log(img.attr('src'));
+})

@@ -35,7 +35,7 @@ const getTypeNameById = (id) => {
         case "safari":
             return "Сафари"
         case "daysen":
-            return "Атлант"
+            return "Дайсен"
         case "oxford":
             return "Оксфорд"
         case "bergamo":

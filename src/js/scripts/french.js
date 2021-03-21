@@ -44,3 +44,34 @@ $("#building_french .size__input").on("input", (e) => {
 $("#building_french .texture__item").on("click", (e) => {
     french.id = $(e.currentTarget).attr("id")
 })
+
+
+
+// active slide changing
+const french_imgs = {
+    "agat": "../img/French/agat.jpg",
+    "alikante": "../img/French/alikante.jpg",
+    "atlant": "../img/French/atlant.jpg",
+    "bergamo": "../img/French/bergamo.jpg",
+    "gaover_3": "../img/French/gaover_3.jpg",
+    "gefest": "../img/French/gefest.jpg",
+    "daysen": "../img/French/daysen.jpg",
+    "deonis": "../img/French/deonis.jpg",
+    "karelia": "../img/French/karelia.jpg",
+    "konkord": "../img/French/konkord.jpg",
+    "marsel": "../img/French/marsel.jpg",
+    "milan": "../img/French/milan.jpg",
+    "millenium": "../img/French/millenium.jpg",
+    "oxford": "../img/French/oxford.jpg",
+    "paladium": "../img/French/palladium.jpg",
+}
+$("#building_french .texture__item").on("click", (e) => {
+    const id = $(e.currentTarget).attr("id")
+    const img = $(".chosen__img")
+    const src = french_imgs[id]
+
+    img.attr('src', src)
+    const picture = $("#building_french .chosen picture").attr("srcset", src)
+    const source = $("#building_french .chosen source").attr("srcset", src)
+    // console.log(img.attr('src'));
+})
