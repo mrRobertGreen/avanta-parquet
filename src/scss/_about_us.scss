@@ -12,6 +12,11 @@
 
     &__pic {
         flex: 0 0 49%;
+        img {
+            padding-top: 59px;
+            // margin: 0 auto;
+            padding-left: calc(70px + (144 - 70)* (100vw - 900px)/(1600 - 320));
+        }
     }
 
     &__text {
@@ -50,6 +55,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            img {
+                padding: 0;
+            }
         }
     }
 }
