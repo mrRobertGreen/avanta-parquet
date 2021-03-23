@@ -26,7 +26,7 @@ const toggleActiveClass = (e, selector, activeClassName) => {
 
 let menuSlider
 if (window.matchMedia("(max-width: 625px)").matches) {
-    menuSlider = enableMenuScroll("menu-row", "menu__item", [0, 130, 250])
+    menuSlider = enableMenuScroll("menu-row", "menu__item", [0, 130, 350])
 }
 
 $(".menu__item").on("click", (e) => toggleActiveClass(e, ".menu__item", "menu__item_active"))
@@ -124,7 +124,7 @@ $(window).on("scroll", function () {
         isAllowedAutoSwitching = false
         $(".menu__item").removeClass("menu__item_active")
         $("#menu-" + ids[currentIndex]).addClass("menu__item_active")
-        const stepLengths = [0, 130, 250]
+        const stepLengths = [0, 130, 350]
         if (menuSlider) {
             menuSlider.slideTo(stepLengths[currentIndex])
         }
