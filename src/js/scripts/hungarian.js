@@ -70,8 +70,11 @@ $("#building_hungarian .texture__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
     const img = $(".chosen__img")
     const src = hun_imgs[id]
+    const p_ = $("#building_hungarian .chosen__name")
+    const name = getTypeNameById(id);
 
     img.attr('src', src)
+    p_.text(name)
     const picture = $("#building_hungarian .chosen picture").attr("srcset", src)
     const source = $("#building_hungarian .chosen source").attr("srcset", src)
     // console.log(img.attr('src'));

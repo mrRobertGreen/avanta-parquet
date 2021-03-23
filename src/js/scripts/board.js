@@ -48,28 +48,32 @@ $("#building_board .texture__item").on("click", (e) => {
 
 // active slide changing
 const board_imgs = {
-    "agat": "../img/Desk/агат.jpg",
-    "alikante": "../img/Desk/аликанте.jpg",
-    "atlant": "../img/Desk/атлант.jpg",
-    "bergamo": "../img/Desk/бергамо.jpg",
-    "glover": "../img/Desk/гаовер_3.jpg",
-    "gefest": "../img/Desk/гефест.jpg",
-    "daysen": "../img/Desk/дайсен.jpg",
-    "deonis": "../img/Desk/деонис.jpg",
-    "karelia": "../img/Desk/карелия.jpg",
+    "agat": "../img/Desk/agat.jpg",
+    "alikante": "../img/Desk/alikante.jpg",
+    "atlant": "../img/Desk/argentum.jpg",
+    "bergamo": "../img/Desk/bergamo.jpg",
+    "glover": "../img/Desk/daysen.jpg",
+    "gefest": "../img/Desk/gefest.jpg",
+    "daysen": "../img/Desk/daysen.jpg",
+    "deonis": "../img/Desk/deonis.jpg",
+    "karelia": "../img/Desk/karelia.jpg",
     // "konkord": "../img/Desk/конкорд.jpg",
-    "marsel": "../img/Desk/марсель.jpg",
-    "milan": "../img/Desk/милан.jpg",
-    "millenium": "../img/Desk/миллениум.jpg",
-    "oxford": "../img/Desk/оксфорд.jpg",
-    "paladium": "../img/Desk/палладиум.jpg",
+    "marsel": "../img/Desk/marsel.jpg",
+    "milan": "../img/Desk/milan.jpg",
+    "millenium": "../img/Desk/millenium.jpg",
+    "oxford": "../img/Desk/oxford.jpg",
+    "paladium": "../img/Desk/palladium.jpg",
 }
 $("#building_board .texture__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
     const img = $(".chosen__img")
+    const p_ = $("#building_board .chosen__name")
     const src = board_imgs[id]
+    const name = getTypeNameById(id);
+
     
     img.attr('src', src)
+    p_.text(name)
     const picture = $("#building_board .chosen picture").attr("srcset", src)
     const source = $("#building_board .chosen source").attr("srcset", src)
     // console.log(img.attr('src'));

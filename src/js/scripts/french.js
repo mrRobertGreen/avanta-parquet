@@ -69,8 +69,11 @@ $("#building_french .texture__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
     const img = $(".chosen__img")
     const src = french_imgs[id]
+    const p_ = $("#building_french .chosen__name")
+    const name = getTypeNameById(id);
 
     img.attr('src', src)
+    p_.text(name)
     const picture = $("#building_french .chosen picture").attr("srcset", src)
     const source = $("#building_french .chosen source").attr("srcset", src)
     // console.log(img.attr('src'));

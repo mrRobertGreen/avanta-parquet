@@ -44,12 +44,16 @@ const getTypeNameById = (id) => {
             return "Деонис"
         case "gray":
             return "Грей"
+        case "palladium":
+            return "Палладиум"
+        case "konkord":
+            return "Конкорд"
         default:
             break;
     }
 }
 const getSendBuildingData = (product) => {
-    const {name, id, width, thickness, metres} = product
+    const { name, id, width, thickness, metres } = product
     return {
         name,
         type: getTypeNameById(id),

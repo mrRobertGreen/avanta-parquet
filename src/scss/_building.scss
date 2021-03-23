@@ -5,8 +5,7 @@
 
     display: block;
 
-    &__size {
-    }
+    &__size {}
 
     &__dimensions {
         // padding-top: 30px;
@@ -70,8 +69,10 @@
     }
 
     &__item {
-        width: calc(63px + (112px - 62px) * (100vw - 320px) / (1200 - 1000));
+        width: calc(63px + (112px - 92px) * (100vw - 320px) / (1200 - 1000));
+
         cursor: pointer;
+
         img {
             width: 100%;
             height: 100%;
@@ -187,20 +188,6 @@
         -moz-appearance: textfield;
     }
 
-    // &__list {
-    //     background: $white;
-    //     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
-    //     position: absolute;
-    //     right: 250px;
-    //     z-index: 100;
-    //     overflow: hidden;
-    //     height: 140px;
-
-    //     div {
-    //         padding: 5px 15px;
-    //     }
-    // }
-
     &__price {
         background: $light-grey;
         border-radius: 11px;
@@ -242,10 +229,12 @@
     img {
         width: 100%;
         border-radius: 25px;
+
         &::before {
             content: "Name";
         }
     }
+
     &__name {
         // width: 50%;
         font-weight: 500;
@@ -253,10 +242,7 @@
         line-height: 25px;
         text-align: center;
         padding-top: 15px;
-        // background-color: red;
-        padding-bottom: 30px;
-        // position: absolute;
-        // top: 500px;
+        // padding-bottom: 30px;
 
         color: $grey;
     }
@@ -285,6 +271,7 @@
     div {
         display: block;
     }
+
     &::before {
         content: "";
         position: absolute;
@@ -294,16 +281,19 @@
             background-position: 13px;
             background-size: 50px;
         }
+
         @media (max-width: 450px) {
             background-position: 8px;
             background-size: 40px;
             width: 98%;
             height: 98%;
         }
+
         @media (max-width: 340px) {
             background-size: 36px;
             background-position: 5px;
         }
+
         width: 100%;
         height: 100%;
         background-size: 62px;
@@ -312,27 +302,6 @@
     }
 }
 
-// .check {
-//     // display: none;
-//     position: absolute;
-//     top: 32px;
-//     left: 18px;
-
-//     &__first {
-//         background-color: red;
-//         border-radius: 25px;
-//         height: 11px;
-//         width: 40px;
-
-//     }
-//     &__second {
-//         background-color: red;
-//         border-radius: 25px;
-//         height: 11px;
-//         width: 90px;
-
-//     }
-// }
 @media (min-width: 600px) {
     .chosen._fixed {
         img {
@@ -340,6 +309,7 @@
         }
     }
 }
+
 @media (min-width: 1250px) {
     .chosen._fixed {
         img {
@@ -351,12 +321,6 @@
 @media (min-width: 1000px) {
     .building {
         padding-top: 160px;
-        // display: grid;
-        // grid-template-columns: 1fr 2fr;
-        // grid-template-rows: 1fr 1fr;
-        // grid-template-areas:
-        //     "chos tex"
-        //     "chos cal";
 
         &__btn-wrapper {
             display: block;
@@ -419,9 +383,15 @@
         display: flex;
         flex-direction: row-reverse;
         width: 100%;
+        align-items: flex-start;
+
+        &__item {
+            width: 112px;
+            height: 94px;
+        }
 
         &__grid {
-            min-width: 617px;
+            // min-width: 617px;
             flex: 1 0 50%;
         }
     }
@@ -438,34 +408,35 @@
             width: 100%;
             max-height: 267px;
             height: 100%;
+            height: 267px;
 
             // &::before {
             //     content: "Name";
             //     // background-color: red;
             // }
         }
+
+        &__name {
+            max-width: 366px;
+        }
     }
 
     .chosen._fixed {
-        img {
+
+        div {
             position: fixed;
             width: 366px;
             height: 267px;
+
             // left: 63px;
             top: calc(70px + 75px);
-        }
-
-        p {
-            // position: fixed;
-            // width: 366px;
-            // height: 267px;
-            // left: 63px;
-            // top: calc(70px + 75px);
         }
     }
 
     .chosen_down {
         padding-top: 0;
+        margin-bottom: 30px;
+        justify-self: flex-start;
     }
 
     .calc-wrapper {
@@ -473,6 +444,7 @@
         display: flex;
         justify-content: flex-end;
         padding-top: 100px;
+        max-height: 378px;
     }
 
     .calc {
@@ -494,6 +466,7 @@
     visibility: hidden;
     display: none;
 }
+
 @media (min-width: 1360px) {
     .chosen._fixed {
         img {
