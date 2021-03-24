@@ -43,9 +43,15 @@
         background-color: $pink;
         max-width: 387px;
         max-height: 387px;
+        min-width: 320px;
+        
         border-radius: 25px;
         margin: 0 37px;
         cursor: pointer;
+        img {
+            width: 100%;
+            height: 100%;
+        }
         
     }
     .discounts__slide {
