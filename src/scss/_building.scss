@@ -228,6 +228,7 @@
 
     img {
         width: 100%;
+        height: calc(237px + (560 - 237) * ((100vw - 320px) / (900 - 320)));
         border-radius: 25px;
 
         &::before {
