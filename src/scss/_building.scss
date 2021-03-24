@@ -65,12 +65,12 @@
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 15px;
         padding-top: 45px;
-        // background: #000;
     }
 
     &__item {
-        width: calc(63px + (112px - 92px) * (100vw - 320px) / (1200 - 1000));
-
+        // width: calc(63px + (112px - 92px) * (100vw - 320px) / (1200 - 1000));
+        width: calc(65px + (112px - 65px) * (100vw - 320px) / (1200 - 320));
+        
         cursor: pointer;
 
         img {

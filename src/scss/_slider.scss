@@ -49,16 +49,16 @@
         
     }
     .discounts__slide {
-        visibility: hidden;
+        display: none;
         
         &:nth-child(1) {
-            visibility: visible;
+            display: block;
         }
     } 
     /* Слайдер запущен */
     &.slick-initialized {
         .discounts__slide {
-            visibility: visible;
+            display: block;
         }
     }
 
@@ -178,22 +178,6 @@
             margin: 0 0 0 11px;
             width: 11px;
             height: 11px;
-        }
-    }
-
-    .discounts__slider {
-        > div {
-            display: none;
-
-            &:first-child {
-                display: block;
-            }
-        }
-
-        &.slick-initialized {
-            > div {
-                display: block;
-            }
         }
     }
 }
