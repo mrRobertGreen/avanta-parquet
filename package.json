@@ -14,16 +14,16 @@
 		"gulp-file-include": "latest",
 		"gulp-fonter": "latest",
 		"gulp-group-css-media-queries": "latest",
-		"gulp-imagemin": "latest",
+		"gulp-imagemin": "^7.1.0",
 		"gulp-media-queries-splitter": "latest",
 		"gulp-newer": "latest",
 		"gulp-plumber": "latest",
 		"gulp-rename": "latest",
 		"gulp-replace": "latest",
 		"gulp-responsive": "latest",
-		"gulp-sass": "latest",
+		"gulp-sass": "^4.1.0",
 		"gulp-ttf2woff": "latest",
-		"gulp-ttf2woff2": "latest",
+		"gulp-ttf2woff2": "^4.0.1",
 		"gulp-uglify-es": "latest",
 		"gulp-version-number": "^0.2.4",
 		"gulp-webp-html": "^1.0.2",
@@ -34,9 +34,11 @@
 		"webp-converter": "^2.2.3"
 	},
 	"dependencies": {
+		"-": "0.0.1",
 		"cwebp-bin": "^6.1.1",
 		"mozjpeg": "^7.0.0",
 		"node-sass": "^5.0.0",
-		"optipng-bin": "^7.0.0"
+		"optipng-bin": "^7.0.0",
+		"save": "^2.4.0"
 	}
 }
