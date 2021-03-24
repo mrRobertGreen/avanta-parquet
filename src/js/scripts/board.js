@@ -50,7 +50,8 @@ $("#building_board .texture__item").on("click", (e) => {
 const board_imgs = {
     "agat": "../img/Desk/agat.jpg",
     "alikante": "../img/Desk/alikante.jpg",
-    "atlant": "../img/Desk/argentum.jpg",
+    "atlant": "../img/Desk/atlant.jpg",
+    "argentum": "../img/Desk/argentum.jpg",
     "bergamo": "../img/Desk/bergamo.jpg",
     "glover": "../img/Desk/daysen.jpg",
     "gefest": "../img/Desk/gefest.jpg",

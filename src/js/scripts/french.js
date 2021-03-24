@@ -52,6 +52,7 @@ const french_imgs = {
     "agat": "../img/French/agat.jpg",
     "alikante": "../img/French/alikante.jpg",
     "atlant": "../img/French/atlant.jpg",
+    "argentum": "../img/French/argentum.jpg",
     "bergamo": "../img/French/bergamo.jpg",
     "gaover": "../img/French/gaover_3.jpg",
     "gefest": "../img/French/gefest.jpg",

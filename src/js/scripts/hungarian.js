@@ -52,6 +52,7 @@ const hun_imgs = {
     "agat": "../img/Vengerian/agat.jpg",
     "alikante": "../img/Vengerian/alikante.jpg",
     "atlant": "../img/Vengerian/atlant.jpg",
+    "argentum": "../img/Vengerian/argentum.jpg",
     "bergamo": "../img/Vengerian/bergamo.jpg",
     "glover": "../img/Vengerian/gaover_3.jpg",
     "gefest": "../img/Vengerian/gefest.jpg",
