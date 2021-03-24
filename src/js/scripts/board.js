@@ -62,7 +62,7 @@ const board_imgs = {
     "milan": "../img/Desk/milan.jpg",
     "millenium": "../img/Desk/millenium.jpg",
     "oxford": "../img/Desk/oxford.jpg",
-    "paladium": "../img/Desk/palladium.jpg",
+    "paladium": "../img/Desk/palladiumпгдз.jpg",
 }
 $("#building_board .texture__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
