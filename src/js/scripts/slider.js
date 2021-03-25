@@ -40,14 +40,14 @@ if (isSafari || isExplorer) {
     $('.discounts__slider').slick("unslick")
 } else {
     $('.discounts__slider').slick({
-        // adaptiveHeight: true,
+        adaptiveHeight: true,
         autoplay: true,
         arrows: false,
         dots: true,
         centerMode: true,
         infinite: true,
         focusOnSelect: true,
-        // variableWidth: true,
+        variableWidth: true,
         speed: 400,
     })
 }
