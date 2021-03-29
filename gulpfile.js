@@ -10,9 +10,9 @@ const scss = require("gulp-sass"); // плагин для перевода scss/
 const group_media = require("gulp-group-css-media-queries"); // плагин для перемещения медиа-запросов в конец css файла
 const plumber = require("gulp-plumber"); // "сантехник" - плагин для вывода синтаксических ошибок в консоли без прерывания работы gulp
 const del = require("del"); // плагин для удаления/очищение файлов/папок
-// const imagemin = require("gulp-imagemin"); // плагин для сжатия изображений
-// const pngquant = require('imagemin-pngquant'); // сжатие .png
-// const mozjpeg = require('imagemin-mozjpeg'); // сжатие .jpeg
+const imagemin = require("gulp-imagemin"); // плагин для сжатия изображений
+const pngquant = require('imagemin-pngquant'); // сжатие .png
+const mozjpeg = require('imagemin-mozjpeg'); // сжатие .jpeg
 const uglify = require("gulp-uglify-es").default; // плагин для минификации js файла 
 const rename = require("gulp-rename"); // плагин переименования файлов
 const fileinclude = require("gulp-file-include"); // плагин для импорта кода в html (конструкции типа @@include('file.html'))
@@ -153,13 +153,13 @@ function js() {
 function images() {
 	return src(path.src.images)
 		.pipe(newer(path.build.images)) // пропуск только новых изображений
-		// .pipe(
-		// 	imagemin([
-		// 		webp({
-		// 			quality: 75 // конвертация в webp формат
-		// 		})
-		// 	])
-		// )
+		.pipe(
+			imagemin([
+				webp({
+					quality: 75 // конвертация в webp формат
+				})
+			])
+		)
 		.pipe(
 			rename({
 				extname: ".webp" // замена расширения на webp
@@ -168,20 +168,20 @@ function images() {
 		.pipe(dest(path.build.images))
 		.pipe(src(path.src.images))
 		.pipe(newer(path.build.images))
-		// .pipe(imagemin([
-		// 	pngquant({quality: [0.5, 0.5]}),
-		// 	mozjpeg({quality: 50})
-		//   ]))	  
-		// .pipe(
-		// 	imagemin({ // сжатие изображений
-		// 		progressive: true,
-		// 		svgoPlugins: [{
-		// 			removeViewBox: false
-		// 		}],
-		// 		interlaced: true,
-		// 		optimizationLevel: 3 // 0 to 7
-		// 	})
-		// )
+		.pipe(imagemin([
+			pngquant({quality: [0.5, 0.5]}),
+			mozjpeg({quality: 50})
+		  ]))	  
+		.pipe(
+			imagemin({ // сжатие изображений
+				progressive: true,
+				svgoPlugins: [{
+					removeViewBox: false
+				}],
+				interlaced: true,
+				optimizationLevel: 3 // 0 to 7
+			})
+		)
 		.pipe(dest(path.build.images))
 }
 

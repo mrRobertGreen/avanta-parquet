@@ -1,11 +1,11 @@
 const connectPopupForm = document.getElementById('connect-popup-form');
 const questionsForm = document.getElementById('questions-form');
-// const deliveryForm = document.getElementById('delivery-form');
+const deliveryForm = document.getElementById('delivery-form');
 const buildPopupForm = document.getElementById('build-popup-form');
 
 connectPopupForm.addEventListener('submit', (e) => formSend(e, connectPopupForm));
 buildPopupForm.addEventListener('submit', (e) => formSend(e, buildPopupForm));
-// deliveryForm.addEventListener('submit', (e) => formSend(e, deliveryForm));
+deliveryForm.addEventListener('submit', (e) => formSend(e, deliveryForm));
 questionsForm.addEventListener('submit', (e) => formSend(e, questionsForm));
 let isCooperation = false
 
@@ -14,10 +14,11 @@ async function formSend(e, form) {
 
 	let formData = new FormData(form);
 	// let error = formValidate(form);
-	let error = null
+	let error = null;
+
+	
 
 	if (form.id === "build-popup-form") {
-		console.log(buildingData);
 		for (const key in buildingData) {
 			if (Object.hasOwnProperty.call(buildingData, key)) {
 				const element = buildingData[key];
@@ -27,7 +28,14 @@ async function formSend(e, form) {
 	}
 	if (isCooperation) {
 		formData.append("cooperation", true)
+		isCooperation = false
 	}
+
+	var object = {};
+	formData.forEach(function (value, key) {
+		object[key] = value;
+	});
+	console.log(object);
 
 	if (!error) {
 		form.classList.add('_sending');

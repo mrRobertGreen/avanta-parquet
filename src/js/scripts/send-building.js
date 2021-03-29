@@ -6,7 +6,6 @@ let buildingData = {
     metres: 1,
 }
 const getTypeNameById = (id) => {
-    console.log(id);
     switch (id) {
         case "agat":
             return "Агат"
@@ -71,7 +70,6 @@ $(".building__btn").click((e) => {
             buildingData = getSendBuildingData(french)
             break;
         case "board-btn":
-            console.log(board);
             buildingData = getSendBuildingData(board)
             break;
         case "hungarian-btn":

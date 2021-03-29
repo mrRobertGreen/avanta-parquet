@@ -20,10 +20,10 @@
 
 
 	//Тело письма
-	$body = '<h1>Получена новая заявка с сайта Паркет Сейл!</h1>';
+	$body = '<h1>Заявка с Паркет Сейл!</h1>';
 	
 	if(trim(!empty($_POST['cooperation']))){
-		$body.='<p><strong>Новый дизайнер или архитектор хочет подружиться с нами!</strong></p>';
+		$body.='<p><strong>Сотрудничество с Паркет Сейл</strong></p>';
 	} else if(trim(!empty($_POST['name']))){
 		if(trim(!empty($_POST['name']))){
 			$body.='<p><strong>Название:</strong> '.$_POST['name'].'</p>';
@@ -34,7 +34,7 @@
 		if(trim(!empty($_POST['thickness']))){
 			$body.='<p><strong>Толщина:</strong> '.$_POST['thickness'].'</p>';
 		}
-		if(trim(!empty($_POST['height']))){
+		if(trim(!empty($_POST['width']))){
 			$body.='<p><strong>Ширина:</strong> '.$_POST['width'].'</p>';
 		}
 		if(trim(!empty($_POST['metres']))){
