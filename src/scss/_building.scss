@@ -1,11 +1,12 @@
 .building {
-    padding-top: 100px;
+    padding-top: 75px;
     background-color: $white;
     // max-width: 617px;
 
     display: block;
 
-    &__size {}
+    &__size {
+    }
 
     &__dimensions {
         // padding-top: 30px;
@@ -63,14 +64,18 @@
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 15px;
+        grid-gap: 9px;
         padding-top: 45px;
     }
 
     &__item {
         // width: calc(63px + (112px - 92px) * (100vw - 320px) / (1200 - 1000));
         width: calc(65px + (112px - 65px) * (100vw - 320px) / (1200 - 320));
-        
+
+        @media (max-width: 450px) {
+            height: 50px;
+        }
+
         cursor: pointer;
 
         img {
@@ -155,6 +160,8 @@
 
     &__metres {
         font-size: 15px;
+        display: flex;
+        align-items: center;
         line-height: 23px;
         color: $grey;
         flex: 50%;
@@ -262,7 +269,7 @@
 }
 
 .calc-wrapper {
-    padding-top: 65px;
+    padding-top: 30px;
 }
 
 .texture__item_active {
@@ -279,12 +286,12 @@
         background-image: url("../img/choose.png");
 
         @media (max-width: 550px) {
-            background-position: 13px;
+            background-position: 19px;
             background-size: 50px;
         }
 
-        @media (max-width: 450px) {
-            background-position: 8px;
+        @media (max-width: 470px) {
+            background-position: 12.5px;
             background-size: 40px;
             width: 98%;
             height: 98%;
@@ -292,7 +299,7 @@
 
         @media (max-width: 340px) {
             background-size: 36px;
-            background-position: 5px;
+            background-position: 8px;
         }
 
         width: 100%;
@@ -307,6 +314,11 @@
     .chosen._fixed {
         img {
             left: 30px;
+        }
+    }
+    .texture {
+        &__type {
+            grid-gap: 15px;
         }
     }
 }
@@ -368,6 +380,7 @@
             display: flex;
             align-items: center;
 
+
             input {
                 margin-left: 8px;
             }
@@ -423,7 +436,6 @@
     }
 
     .chosen._fixed {
-
         div {
             position: fixed;
             width: 366px;

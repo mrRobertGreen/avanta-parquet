@@ -16,6 +16,7 @@ chahgeSubmitButtonText()
 
 $(window).resize(chahgeSubmitButtonText)
 
+
 $(window).on("scroll", function () {
     stickyChosenImageFlow("building_board")
     stickyChosenImageFlow("building_hungarian")
@@ -53,3 +54,8 @@ const stickyChosenImageFlow = (productId) => {  // sticky-эффект у выб
         lazySizes.init(); // lazySizes применяется при обработке изображений, находящихся на странице.
     }
 })();
+
+// замена текста на калькуляторе 
+if (window.innerWidth < 617) {
+    $(".size__metres #_text").text("Кв.метры");
+}
