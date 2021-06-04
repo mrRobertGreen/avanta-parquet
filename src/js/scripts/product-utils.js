@@ -13,7 +13,7 @@ const calculatePrice = (product) => {
     const priceData = getPriceDataByProductName(product.name)
     const type = getProductTypeById(id, name)
     let price = getItemFromTree(priceData, [type, thickness, width])
-    return price * metres
+    return Math.round(price * metres * 1.1) // + 10 % к цене
 }
 const getProductTypeById = (id, name) => {
     if (name === "Инженерная доска") {
